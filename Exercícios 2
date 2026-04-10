@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <math.h> // Necessário para a função pow()
+
+int main() {
+    float capital, taxa, montante, juros;
+    int meses = 12;
+
+    printf("--- Calculadora de Juros Compostos (12 meses) ---\n");
+
+    // Entrada de dados
+    printf("Digite o capital inicial (R$): ");
+    scanf("%f", &capital);
+
+    printf("Digite a taxa de juros mensal (%%): ");
+    scanf("%f", &taxa);
+
+    // Conversão da taxa de porcentagem para decimal (ex: 1% -> 0.01)
+    float taxaDecimal = taxa / 100.0;
+
+    // Cálculo do montante: M = C * (1 + i)^t
+    // pow(base, expoente) calcula (1 + taxaDecimal) elevado a 12
+    montante = capital * pow((1.0 + taxaDecimal), meses);
+
+    // Cálculo dos juros acumulados
+    juros = montante - capital;
+
+    // Exibição dos resultados com duas casas decimais
+    printf("\n--- Resultado após 12 meses ---\n");
+    printf("Capital Inicial: R$ %.2f\n", capital);
+    printf("Taxa de Juros: %.2f%% ao mes\n", taxa);
+    printf("Montante Final: R$ %.2f\n", montante);
+    printf("Total em Juros: R$ %.2f\n", juros);
+
+    return 0;
+}
