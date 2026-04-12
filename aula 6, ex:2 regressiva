@@ -1,0 +1,27 @@
+//C aula6 exemplo2
+
+//regressiva 
+//Crie a função regressiva que recebe um número inteiro e
+//imprime a contagem decrescente do número recebido até
+//0. Use while.
+//Crie um programa em C, que recebe um número do
+//usuário e passa para a função regressiva.
+
+#include <stdio.h>
+
+
+void regressiva (int numero) {
+     int fim = 0;
+     while (numero > fim) {
+     printf ("%d\n",numero);
+     numero--;
+    }
+}
+int main (){
+    int n;
+    printf("digite n:");
+    scanf("%d", &n);
+    
+    regressiva (n);
+    return 0;
+}
