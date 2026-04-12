@@ -1,0 +1,23 @@
+//C aula6 exemplo2
+
+//crescente 
+
+
+#include <stdio.h>
+
+
+void crescente (int numero) {
+     int inicio = 0;
+     while (inicio <= numero) {
+     printf ("%d\n", inicio );
+     inicio++;
+    }
+}
+int main (){
+    int n;
+    printf("digite n:");
+    scanf("%d", &n);
+    
+    crescente (n);
+    return 0;
+}
